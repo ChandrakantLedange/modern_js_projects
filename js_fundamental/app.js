@@ -115,8 +115,35 @@ val = parseFloat('100.30');//100.3
 
 
 // const val1 =5;
-const val1 =String(5);
-const val2 = 6;
-const sum = val1 + val2;
-console.log(sum);
-console.log(typeof sum);
+// const val1 =String(5);
+// const val2 = 6;
+// const sum = val1 + val2;
+// console.log(sum);
+// console.log(typeof sum);
+
+
+// ** Numbers and Math object **
+const num1 = 100;
+const num2 = 50;
+let res;
+
+//Simple math with numbers
+res = num1 + num2;
+res = num1 - num2;
+res = num1 * num2;
+res = num1 / num2;
+res = num1 % num2;
+
+//Math object
+res = Math.PI;
+res = Math.round(2.8);//3
+res = Math.ceil(2.4);//3
+res = Math.floor(2.4);//2
+res = Math.sqrt(64);//8
+res = Math.abs(-3);//3
+res = Math.pow(8,2);//64
+res = Math.min(10,5,95,89,26,56,235,-12);//-12
+res = Math.max(10,5,95,89,26,56,235,-12);//-12
+res = Math.floor(Math.random()*20);
+
+console.log(res)
