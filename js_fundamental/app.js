@@ -57,3 +57,20 @@ const age = 26;
 console.log(age);
 // age=28;   //can't reassign
 // const lang; // have to aasign a value
+
+
+//Data types in javascript
+//Thre are two types of data types 
+
+//1.primitiv data types
+//I)String - sequence of character
+//II)Number - decimal , float and all type of numbers.
+//III)Boolean - true false
+//IV)Null - Empty value - typeof - object
+//V)Undefined - Not assigned value
+//VI)symbol - (ES6 feature) - eg. const sym = symbol();
+
+//Reference Type
+//I)Array
+//II)Object
+//III)FUnctions ... etc
