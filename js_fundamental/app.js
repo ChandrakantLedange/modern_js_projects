@@ -242,3 +242,80 @@ html = `
  <li>${3+3}</li>
 `
 document.body.innerHTML = html;
+
+
+// ** Array and methods **
+const numbers = [4,6,56,789,65,89,74];
+const numbers2 = new Array(10,20,30,40,50,60);
+const fruits = ['Apple','Banana','Orange','Pear'];
+const mixed = [22,'Hey',true,undefined,null,{a:1,b:2},new Date()];
+
+console.log(mixed);
+
+let arrayRes;
+
+//get array length
+arrayRes = numbers.length; //7
+
+//check if is array
+arrayRes = Array.isArray(numbers); //true
+
+//get single value
+arrayRes = numbers[3];//789
+
+//inser into array
+numbers[2] = 600;
+console.log(numbers); //[4, 6, 600, 789, 65, 89, 74]
+
+//find index of value
+arrayRes = numbers.indexOf(65) //4
+arrayRes = numbers.indexOf(605) //-1 not exist in array
+
+//mutating arrays
+//push - will push value end of the array.
+numbers.push(303); //[4, 6, 600, 789, 65, 89, 74, 303]
+
+//unshift - will push value front of the array.
+numbers.unshift(503); //[503, 4, 6, 600, 789, 65, 89, 74, 303]
+
+//pop - used to delete last value from array
+numbers.pop(); //[503, 4, 6, 600, 789, 65, 89, 74]
+
+//shift - used to delete front value from array
+numbers.shift(); //[4, 6, 600, 789, 65, 89, 74]
+
+//splice values - we can remove specific values
+numbers.splice(1,1);//[4, 600, 789, 65, 89, 74] //6 gone
+
+//reverse()
+numbers.reverse(); //[74, 89, 65, 789, 600, 4]
+
+//concate array
+let newArray = numbers.concat(numbers2);
+// console.log(newArray);// [74, 89, 65, 789, 600, 4, 10, 20, 30, 40, 50, 60]
+
+//sort 
+newArray = fruits.sort(); //['Apple', 'Banana', 'Orange', 'Pear']
+newArray = numbers.sort();//sort by first number //[4, 600, 65, 74, 789, 89]
+
+//use compare function to real number sorting 
+newArray = numbers.sort((x,y)=>{
+    return x-y
+}); //[4, 65, 74, 89, 600, 789]
+
+//use compare function to reverse real number  
+newArray = numbers.sort((x,y)=>{
+    return y - x;
+}); //[789, 600, 89, 74, 65, 4]
+
+//find
+function under50(num){
+    return num < 50;
+}
+
+let under50_result = numbers.find(under50);
+console.log(under50_result); //4
+
+console.log(newArray);
+console.log(numbers);
+console.log(arrayRes);
