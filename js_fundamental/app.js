@@ -220,3 +220,24 @@ strRes = str.includes('foorr'); //false
 
 
 console.log(strRes);
+
+
+// ** Template literals **
+const myName = "John";
+const myAage = 26;
+const job = "Web Developer";
+const city = "Hyderabad";
+let html;
+
+//without template literals(ES5)
+html = '<ul><li> Name:' +myName + '</li><li>Age:' +myAge +'</li>';
+
+// With template literals(ES6)
+html = `
+<ul>
+ <li>Name: ${myName}</li>
+ <li>Age: ${myAge}</li>
+ <li>Job: ${job}</li>
+ <li>Age count: ${age>30 ? 'Over 30': 'Under 30'}</li>
+`
+document.body.innerHTML = html;
