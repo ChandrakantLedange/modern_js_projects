@@ -239,5 +239,6 @@ html = `
  <li>Age: ${myAge}</li>
  <li>Job: ${job}</li>
  <li>Age count: ${age>30 ? 'Over 30': 'Under 30'}</li>
+ <li>${3+3}</li>
 `
 document.body.innerHTML = html;
