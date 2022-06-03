@@ -99,14 +99,14 @@ val = (true).toString();
 //string to number 
 val = Number('5'); 
 // console.log(val.toFixed(2));//5.00
-val = Number(true); //1
-val = Number(false);//0 
-val = Number(null);//0 
-val = Number('hello');//NaN
-val = Number([1,2,3,4]);//NaN
+// val = Number(true); //1
+// val = Number(false);//0 
+// val = Number(null);//0 
+// val = Number('hello');//NaN
+// val = Number([1,2,3,4]);//NaN
 
-val = parseInt('100.30');//100
-val = parseFloat('100.30');//100.3
+// val = parseInt('100.30');//100
+// val = parseFloat('100.30');//100.3
 
 //output
 // console.log(val); 
@@ -123,27 +123,100 @@ val = parseFloat('100.30');//100.3
 
 
 // ** Numbers and Math object **
-const num1 = 100;
-const num2 = 50;
-let res;
+// const num1 = 100;
+// const num2 = 50;
+// let res;
 
 //Simple math with numbers
-res = num1 + num2;
-res = num1 - num2;
-res = num1 * num2;
-res = num1 / num2;
-res = num1 % num2;
+// res = num1 + num2;
+// res = num1 - num2;
+// res = num1 * num2;
+// res = num1 / num2;
+// res = num1 % num2;
 
 //Math object
-res = Math.PI;
-res = Math.round(2.8);//3
-res = Math.ceil(2.4);//3
-res = Math.floor(2.4);//2
-res = Math.sqrt(64);//8
-res = Math.abs(-3);//3
-res = Math.pow(8,2);//64
-res = Math.min(10,5,95,89,26,56,235,-12);//-12
-res = Math.max(10,5,95,89,26,56,235,-12);//-12
-res = Math.floor(Math.random()*20);
+// res = Math.PI;
+// res = Math.round(2.8);//3
+// res = Math.ceil(2.4);//3
+// res = Math.floor(2.4);//2
+// res = Math.sqrt(64);//8
+// res = Math.abs(-3);//3
+// res = Math.pow(8,2);//64
+// res = Math.min(10,5,95,89,26,56,235,-12);//-12
+// res = Math.max(10,5,95,89,26,56,235,-12);//-12
+// res = Math.floor(Math.random()*20);
 
-console.log(res)
+// console.log(res)
+
+
+// **  String methods and concatenation
+
+const firstName = "Ganesh";
+const lastName = "Ledange";
+const myAge = 27;
+let fullName;
+
+fullName = firstName + lastName;
+console.log(fullName);//GaneshLedane
+
+//concatenation
+fullName = firstName + ' ' + lastName;
+console.log(fullName); //Ganesh Ledange
+
+//Append
+fullName = 'chandrakant ';
+fullName += 'Ledange';
+
+fullName = 'Hello my name is ' +firstName+ ' and I am ' + myAge + ' old';
+
+// Escaping
+fullName = 'That\'s awesome, I can\'t wait';
+console.log(fullName);
+
+//length
+res = firstName.length;
+
+//concat 
+res = firstName.concat(' ', lastName)
+
+//change case
+res = firstName.toUpperCase();
+res = firstName.toLocaleLowerCase();
+
+//index 
+res = firstName[0];
+
+//indexOf()
+res = firstName.indexOf('s');
+res = firstName.lastIndexOf('G');
+
+//chatAt()
+res = firstName.charAt('3');//e
+
+//get last char
+res = firstName.charAt(firstName.length -1); //h
+
+//substring()
+res = firstName.substring(0,4);//Gane
+
+//slice is similar to substring but in slice we can give negative number
+res = firstName.slice(0,4);//Gane
+res = firstName.slice(-2);//sh will check form end 
+
+console.log(res);
+//split()
+// used to split form sentece and return array 
+let str = "Hello, good morning";
+let strRes = str.split(' '); //['Hello', 'good', 'morning']
+str = "html is scripting,css is styling ,javascript is programming language";
+strRes = str.split(',');
+
+//replace()
+strRes = str.replace('css','SAAS');
+
+//includes()
+strRes = str.includes('javascript'); //true
+strRes = str.includes('foorr'); //false
+
+
+console.log(strRes);
