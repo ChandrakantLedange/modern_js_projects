@@ -148,3 +148,56 @@ switch(new Date().getDay()){
 }
 
 console.log(`Today is ${day}`);
+
+
+//Function declaration and expressions
+function greet(){
+    console.log("Good evening");
+}
+//function calling
+greet();
+
+function fullName(firstName,lastName){
+    return `Hello ${firstName} ${lastName}`
+}
+
+//default parameter
+function fullName(firstName='john',lastName='doe'){
+    return `Hello ${firstName} ${lastName}`
+}//Hello john doe
+
+console.log(fullName());
+
+//function expression
+const square = function(x=3){//it's called anonymous function
+    return x*x;
+}
+console.log(square());
+
+//IIFEs - immidiatley invokable function expressions
+//a function you declare and call at same time
+
+(function(){
+    console.log("IIFEs function called");
+})();
+
+(function(name){
+    console.log(`hey ${name}`);
+})('chandrakant');
+
+//property methods
+const todo={
+    add:function(){
+        console.log('Add todo..');
+    },
+    edit:function(id){
+        console.log(`edit todo..${id}`);
+    }
+}
+//out of the object
+todo.delete =function(){
+    console.log('Delete todo..');
+}
+todo.add();
+todo.edit(102);
+todo.delete();
