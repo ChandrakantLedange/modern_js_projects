@@ -265,7 +265,7 @@ arrayRes = numbers[3];//789
 
 //inser into array
 numbers[2] = 600;
-console.log(numbers); //[4, 6, 600, 789, 65, 89, 74]
+// console.log(numbers); //[4, 6, 600, 789, 65, 89, 74]
 
 //find index of value
 arrayRes = numbers.indexOf(65) //4
@@ -313,9 +313,50 @@ function under50(num){
     return num < 50;
 }
 
-let under50_result = numbers.find(under50);
-console.log(under50_result); //4
+// let under50_result = numbers.find(under50);
+// console.log(under50_result); //4
 
-console.log(newArray);
-console.log(numbers);
-console.log(arrayRes);
+// console.log(newArray);
+// console.log(numbers);
+// console.log(arrayRes);
+
+// ** Object literals **
+
+const person = {
+    firstName:"steve",
+    lastName:"smith",
+    age:28,
+    email:'steve@abc.com',
+    hobbies:['music','sports'],
+    address:{
+        city:"miami",
+        state:'california'
+    },
+    getBirthYear:function(){
+        return 2022 - age;
+    }
+}
+let details;
+details = person;
+
+//get specific value 
+details = person.firstName;
+details = person['lastName'];
+details = person.age;
+details = person.email;
+details = person.hobbies; //all
+details = person.hobbies[1];//sports
+details = person.address;
+details = person.address.state;
+details = person.getBirthYear();
+
+console.log(details);
+
+const people=[
+    {name:'John', age:30},
+    {name:'colleen', age:33},
+];
+
+for(let i=0; i< people.length; i++){
+    console.log(people[i].name);
+}
