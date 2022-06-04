@@ -360,3 +360,32 @@ const people=[
 for(let i=0; i< people.length; i++){
     console.log(people[i].name);
 }
+
+
+//** Date and Times **/
+let dateRes;
+const today = new Date();
+dateRes = today;
+
+//custom date
+let birthday = new Date('11-12-1994 11:20:00');
+birthday = new Date('nov 10 1994 11:20:00');
+birthday = new Date('10/12/1994');
+dateRes = birthday;
+dateRes = today.getMonth(); //5 - actual is june(6) month starts from 0
+dateRes = today.getDay(); //6
+dateRes = today.getFullYear(); //2022
+dateRes = today.getHours(); //8
+dateRes = today.getMinutes();//16
+dateRes = today.getSeconds();
+dateRes = today.getMilliseconds();
+dateRes = today.getMilliseconds();
+dateRes = today.getTime(); //time stamp 1654310874629
+
+//we can set
+birthday.setMonth(2);
+birthday.setFullYear(1994);
+console.log(birthday);
+
+console.log(dateRes);
+console.log(typeof dateRes); //object
