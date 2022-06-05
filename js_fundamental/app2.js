@@ -150,7 +150,7 @@ switch(new Date().getDay()){
 console.log(`Today is ${day}`);
 
 
-//Function declaration and expressions
+// ** Function declaration and expressions **
 function greet(){
     console.log("Good evening");
 }
@@ -201,3 +201,164 @@ todo.delete =function(){
 todo.add();
 todo.edit(102);
 todo.delete();
+
+// ** General Loops **
+//for loop
+
+// for(let i=0; i<10; i++){
+//     if(i === 2){
+//         console.log('2 is my favorite number');
+//         continue;
+//     }
+//     if(i === 5){
+//         console.log('stop the loop')
+//         break;
+//     }
+//     console.log(`Number ${i}`);
+// }
+
+
+//while loop
+let i = 0;
+while(i<10){
+    console.log('number'+i);
+    i++;
+}
+
+
+//do while
+//it always run once no matter what 
+let j = 1000;
+
+do{
+    console.log('number_j' + ' '+j);
+    j++;
+}
+while(j<10);
+
+//Loop use in array.
+const cars =['alto','maruti','eritga','mahindra'];
+
+for(let i=0;i<cars.length;i++){
+    console.log(cars[i]);
+}
+
+//forEach
+cars.forEach(function(car){
+    console.log(car);
+})
+
+//map() - return differnet array
+const users = [
+    {id:1,name:'a'},
+    {id:2,name:'b'},
+];
+
+const ids = users.map((user)=>{
+    return user.id;
+})
+
+console.log(ids);
+
+//for in loop
+const user ={
+    firstName:"Omkar",
+    lastName:"Ledange",
+    age:22
+}
+
+for(let x in user){
+    console.log(`${x}: ${user[x]}`);
+}
+
+
+//var,let and const scope
+
+//global scope
+var a =10;
+let b =20;
+const c = 30;
+
+//functional scope
+// function test(){
+//     var a = 40;
+//     let b = 50;
+//     const c = 60;
+//     console.log('functional scope:',a,b,c);
+// }
+// test();
+
+//block scope
+// if(true){
+//     var a = 40;
+//     let b = 50;
+//     const c = 60;
+//     console.log('block(if) scope:',a,b,c);   
+// }
+
+for(var a=0;a<10;a++){
+    console.log(a);
+}
+console.log('Global scope',a,b,c);//40 20 30 
+
+
+//  ** Look at the window object **
+//window methods / objects / properties
+
+// console.log("hello there");
+// window.console.log("Hey There");
+
+//alert
+// alert("hi chandrakant");
+// window.alert("hey good morning");
+
+//prompt
+// const input = prompt();
+// alert(input);
+
+//confirm
+// if(confirm('are you sure')){
+//     console.log('YES');
+// }else{
+//     console.log('NO');
+// }
+
+
+//Outer height and width
+let val;
+// val = window.outerHeight;
+// val = window.outerWidth;
+
+//Inner height and width
+val  = window.innerHeight;
+val  = window.innerWidth;
+
+// scrollY and scrollX points
+val = window.scrollY;
+val = window.scrollX;
+
+//location object
+// val = window.location;
+// val = window.location.hostname;
+// val = window.location.port;
+// val = window.location.href;
+// val = window.location.search;
+
+//Redirect
+// window.location.href = "http://google.com";
+
+//Reload
+// window.location.reload();
+
+//History object
+// window.history.go(-2);
+
+// val = window.history.length;
+
+
+//Navigator object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+console.log(val)
+
